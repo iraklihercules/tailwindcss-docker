@@ -6,8 +6,7 @@ services:
       - node_modules:/app/node_modules
       - ./app/src:/app
     ports:
-      - 7080:8080
-#    command: ["tail", "-f", "/dev/null"]
+      - 3000:8080
 
 volumes:
   node_modules:

@@ -1,4 +1,12 @@
 .PHONY:
+build:
+	docker compose build
+
+.PHONY:
+down:
+	docker compose down
+
+.PHONY:
 start:
 	docker compose up -d
 
@@ -15,5 +23,12 @@ shell-root:
 	docker exec -it tailwind-css bash
 
 .PHONY:
-watch:
-	docker exec -it -u node tailwind-css bash -c "npm run watch"
+npm-watch:
+	docker exec -it -u node tailwind-css bash -c "npm run build"
+
+.PHONY:
+npm-build:
+	docker exec -it -u node tailwind-css bash -c "npm run build"
+
+.PHONY:
+init: build start npm-build
