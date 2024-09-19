@@ -9,3 +9,5 @@ COPY --chown=node:node src /app
 WORKDIR /app
 
 RUN npm install
+
+CMD ["npm", "run", "serve"]
