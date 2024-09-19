@@ -3,5 +3,9 @@ services:
     build: ./app
     container_name: tailwind-css
     volumes:
+      - node_modules:/app/node_modules
       - ./app/src:/app
     command: ["tail", "-f", "/dev/null"]
+
+volumes:
+  node_modules:

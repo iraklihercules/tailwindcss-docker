@@ -7,3 +7,5 @@ RUN echo 'alias ll="ls -al"' >> /home/node/.bashrc
 
 COPY --chown=node:node src /app
 WORKDIR /app
+
+RUN npm install
