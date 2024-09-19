@@ -1,0 +1,7 @@
+services:
+  app:
+    build: ./app
+    container_name: tailwind-css
+    volumes:
+      - ./app/src:/app
+    command: ["tail", "-f", "/dev/null"]
