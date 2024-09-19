@@ -13,3 +13,7 @@ shell:
 .PHONY:
 shell-root:
 	docker exec -it tailwind-css bash
+
+.PHONY:
+watch:
+	docker exec -it -u node tailwind-css bash -c "npm run watch"
